@@ -1,12 +1,13 @@
 # Neovim & Dev Stack Installer
 
-A lightweight bootstrap script to set up a professional development environment featuring **NvChad**, **Node.js (NVM)**, and **OpenTofu**.
+A lightweight bootstrap script to set up a professional development environment featuring **NvChad**, **~~Node.js (NVM)~~ Bun**, and **OpenTofu**.
 
 ## Features
 
 * **Neovim:** Latest Stable release.
 * **NvChad:** Automated installation of the NvChad starter configuration.
-* **Node.js LTS:** Managed via **NVM** (installed in `$HOME`, no sudo needed for npm globals).
+* ~~**Node.js LTS:** Managed via **NVM** (installed in `$HOME`, no sudo needed for npm globals)~~.
+* **Bun**: We have shifted from Node.js LTS (v24+) to **Bun**. Node.js v24+ frequently encounters a `double free or corruption (out)` error. **Bun** is significantly more stable, memory-efficient, and faster for proot-distro termux.
 * **OpenTofu:** Official repository setup for Infrastructure as Code.
 * **Essentials:** `ripgrep`, `fd-find`, `build-essential`, and `xclip` for clipboard support.
 
