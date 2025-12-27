@@ -33,7 +33,7 @@ curl -fsSL https://raw.githubusercontent.com/Amirulmuuminin/nvim-devstack-initia
 
 ## Post-Installation
 
-1. **Refresh your shell** to enable `nvm` and `node`:
+1. **Refresh your shell** to enable `bun`:
 ```bash
 source ~/.bashrc
 
