@@ -1,54 +1,53 @@
 # Neovim & Dev Stack Installer
 
-A lightweight shell script to bootstrap **NvChad**, **Node.js (via NVM)**, and **OpenTofu** on Debian-based systems. Optimized for both standard Linux environments and `proot-distro` (Termux).
+A lightweight bootstrap script to set up a professional development environment featuring **NvChad**, **Node.js (NVM)**, and **OpenTofu**.
 
 ## Features
 
-* **Neovim:** Latest Stable (via AppImage).
-* **NvChad:** Clean install of the NvChad starter template.
-* **Node.js:** LTS version managed by NVM (No sudo required for Node).
-* **OpenTofu:** Official repository installation.
-* **Tools:** Includes `ripgrep`, `fd-find`, `build-essential`, and `xclip`.
+* **Neovim:** Latest Stable release.
+* **NvChad:** Automated installation of the NvChad starter configuration.
+* **Node.js LTS:** Managed via **NVM** (installed in `$HOME`, no sudo needed for npm globals).
+* **OpenTofu:** Official repository setup for Infrastructure as Code.
+* **Essentials:** `ripgrep`, `fd-find`, `build-essential`, and `xclip` for clipboard support.
 
-## Usage
+## Installation
 
-### 1. Standard Install (No Sudo / proot-distro)
+### 1. Standard Environment (Using Sudo)
 
-Best for environments where you are already root or don't have sudo access (like Termux `proot-distro`).
+For standard Debian, Ubuntu, or WSL setups where root privileges are required:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Amirulmuuminin/nvim-devstack-initial-setup/main/install.sh | bash -s -- --sudo
 
 ```
 
-### 2. Install with Sudo
+### 2. Proot-Distro / No-Sudo
 
-Use this for standard Debian/Ubuntu/WSL installations where root privileges are required for system packages.
+For environments like Termux `proot-distro` where `sudo` is not available or required:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/install.sh | bash -s -- --sudo
+curl -fsSL https://raw.githubusercontent.com/Amirulmuuminin/nvim-devstack-initial-setup/main/install.sh | bash
 
 ```
 
 ## Post-Installation
 
-After the script finishes, refresh your shell environment to activate **NVM**:
-
+1. **Refresh your shell** to enable `nvm` and `node`:
 ```bash
 source ~/.bashrc
-# OR
-source ~/.zshrc
 
 ```
 
-Then, simply run `nvim` to start the NvChad plugin synchronization:
 
+2. **Launch Neovim** to trigger the automatic plugin installation:
 ```bash
 nvim
 
 ```
 
+
+
 ## Requirements
 
-* `curl` and `git` must be installed.
-* Debian-based distribution (Ubuntu, Kali, Linux Mint, etc.).
+* `curl` and `git` installed on the host system.
+* A Debian-based Linux distribution.
